@@ -33,7 +33,6 @@ Output: <source_filename.xnb>
 xnbthumb.exe /xnb <xnb_source_filename.xnb> /content <content_directory>
 xnbthumb.exe /xnb <xnb_source_filename.xnb> /content <content_directory> /outdir <output_directory>
 xnbthumb.exe /xnb <xnb_source_filename.xnb> /content <content_directory> /size <thumbnail_size> /outdir <output_directory>
-xnbthumb.exe /xnb <xnb_source_filename.xnb> /content <content_directory> /size <thumbnail_size> /outdir <output_directory>
 
 Output: <xnb_source_filename.png>
 ------------------------------
