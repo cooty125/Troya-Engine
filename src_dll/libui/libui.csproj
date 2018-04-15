@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79195D47-9E4A-4620-8365-A9667B265B68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Troya.GUI</RootNamespace>
+    <AssemblyName>libui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="assembly_info.cs" />
+    <Compile Include="charset.cs" />
+    <Compile Include="color_theme.cs" />
+    <Compile Include="font.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="winforms\controls\button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\checkbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\listview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\textbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\groupbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\mainmenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\numericupdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\toolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\controls\treeview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winforms\dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winforms\r_toolstrip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winforms\dialog.resx">
+      <DependentUpon>dialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dlg_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_checked_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splitbutton_arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splitbutton_arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treeview_minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treeview_plus.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
